@@ -7,6 +7,7 @@ const url =
 export const useSearchStore = defineStore("searchStore", () => {
   const movies = ref([]);
   const loader = ref(false);
+
   const getMovies = async (search) => {
     loader.value = true;
     const res = await fetch(`${url}${search}`);
@@ -19,5 +20,6 @@ export const useSearchStore = defineStore("searchStore", () => {
     movieStore.movies.push({ ...object, isWatched: false });
     movieStore.activeTab = 1;
   };
+
   return { movies, loader, getMovies, addToUserMovies };
 });
