@@ -26,7 +26,7 @@ import Movie from "./Movie.vue";
 
 const searchStore = useSearchStore();
 
-const searchMovie = ref("spiderman");
+const searchMovie = ref("");
 </script>
 
 <style scoped>
